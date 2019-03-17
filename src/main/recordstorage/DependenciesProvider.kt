@@ -1,0 +1,3 @@
+package recordstorage
+
+interface DependenciesProvider
