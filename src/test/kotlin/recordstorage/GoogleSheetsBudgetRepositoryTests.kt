@@ -1,8 +1,8 @@
 package recordstorage
 
 import com.google.api.client.auth.oauth2.Credential
-import common.Amount
-import common.BudgetRecord
+import common.entities.Amount
+import common.entities.BudgetRecord
 import org.junit.jupiter.api.Test
 import org.slf4j.LoggerFactory
 import java.math.BigDecimal

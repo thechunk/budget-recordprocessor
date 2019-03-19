@@ -1,6 +1,6 @@
 package recordstorage
 
-import common.BudgetRecord
+import common.entities.BudgetRecord
 
 interface BudgetRepository {
     fun processRecord(record: BudgetRecord, accessToken: String)

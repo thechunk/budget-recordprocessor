@@ -1,8 +1,8 @@
 package recordstorage
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import common.Amount
-import common.BudgetRecord
+import common.entities.Amount
+import common.entities.BudgetRecord
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest

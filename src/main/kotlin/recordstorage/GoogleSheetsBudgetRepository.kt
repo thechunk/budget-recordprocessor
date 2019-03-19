@@ -3,7 +3,7 @@ package recordstorage
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
 import com.google.api.services.sheets.v4.Sheets
 import com.google.api.services.sheets.v4.model.ValueRange
-import common.BudgetRecord
+import common.entities.BudgetRecord
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component

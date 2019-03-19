@@ -1,6 +1,6 @@
 package recordstorage
 
-import common.BudgetRecord
+import common.entities.BudgetRecord
 
 class ProcessRecordRequest(
     var data: BudgetRecord,
