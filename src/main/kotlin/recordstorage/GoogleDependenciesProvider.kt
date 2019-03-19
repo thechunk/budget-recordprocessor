@@ -13,7 +13,6 @@ import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.services.sheets.v4.SheetsScopes
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
-import java.io.File
 
 @Component
 @Profile("!test")
