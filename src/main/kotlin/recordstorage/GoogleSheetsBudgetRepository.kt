@@ -12,15 +12,15 @@ import java.util.Arrays.asList
 
 @Component
 @Profile("!test")
-open class GoogleSheetsBudgetRepository(deps: GoogleDependenciesProvider) : BudgetRepository {
+class GoogleSheetsBudgetRepository(deps: GoogleDependenciesProvider) : BudgetRepository {
     val logger = LoggerFactory.getLogger(GoogleSheetsBudgetRepository::class.java)!!
     val credential = GoogleCredential()
     val sheetsServiceBuilder = Sheets.Builder(deps.transport, deps.jsonFactory, null)
         .setApplicationName("Budget")!!
 
-    open val sheet = "1jBs4Obb0hCPUm-3H6dUl-WttFj-AnEUqZWV3vS4Wrzg"
-    open val range = "'Form Responses 2'!A1:ZZ"
-    open var sheetsService: Sheets? = null
+    val sheet = "1jBs4Obb0hCPUm-3H6dUl-WttFj-AnEUqZWV3vS4Wrzg"
+    val range = "'Form Responses 2'!A1:ZZ"
+    var sheetsService: Sheets? = null
     val dateFormat = SimpleDateFormat("MM/dd/yy HH:mm:ss")
 
     override fun processRecord(record: BudgetRecord, accessToken: String) {
