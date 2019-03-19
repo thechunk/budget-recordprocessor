@@ -1,5 +1,7 @@
 package recordstorage
 
+import common.BudgetRecord
+
 interface BudgetService {
     val budgetRepository: BudgetRepository
 

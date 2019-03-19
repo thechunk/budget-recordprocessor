@@ -12,10 +12,12 @@ group 'com.rcheung.budget'
 version '1.0-SNAPSHOT'
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
+    implementation 'com.rcheung.budget:common:1.0-SNAPSHOT'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'

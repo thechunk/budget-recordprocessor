@@ -1,19 +1,6 @@
 package recordstorage
 
-import java.math.BigDecimal
-import java.util.*
-
-class Amount(
-    var value: BigDecimal,
-    var currency: Currency = Currency.getInstance("HKD")
-)
-
-class BudgetRecord(
-    var description: String,
-    var amount: Amount,
-    var paymentMethod: String,
-    var category: String
-)
+import common.BudgetRecord
 
 class ProcessRecordRequest(
     var data: BudgetRecord,
