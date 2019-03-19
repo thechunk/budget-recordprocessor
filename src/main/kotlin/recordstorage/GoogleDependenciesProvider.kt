@@ -17,9 +17,9 @@ import java.io.File
 
 @Component
 @Profile("!test")
-open class GoogleDependenciesProvider : DependenciesProvider {
-    val transport = GoogleNetHttpTransport.newTrustedTransport()!!
-    val jsonFactory = JacksonFactory.getDefaultInstance()!!
+class GoogleDependenciesProvider : DependenciesProvider {
+    final val transport = GoogleNetHttpTransport.newTrustedTransport()!!
+    final val jsonFactory = JacksonFactory.getDefaultInstance()!!
 }
 
 @Component
@@ -29,7 +29,7 @@ class TestGoogleDependenciesProvider : GoogleDependenciesProvider() {
 
     private fun getCredentials(transport: NetHttpTransport, jsonFactory: JsonFactory): Credential {
         // Load client secrets.
-        val f = File("resources/client_id.json")
+        val f = this.javaClass.getResourceAsStream("/client_id.json")
         val clientSecrets = GoogleClientSecrets.load(jsonFactory, f.reader())
         val scopes = listOf(SheetsScopes.SPREADSHEETS)
 
