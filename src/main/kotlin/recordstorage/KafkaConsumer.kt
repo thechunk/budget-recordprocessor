@@ -11,9 +11,9 @@ import org.springframework.util.SerializationUtils
 class KafkaConsumer : Consumer {
     val logger = LoggerFactory.getLogger(KafkaConsumer::class.java)!!
 
-    @KafkaListener(topics=[Kafka.RECORDS_TOPIC], groupId = "group_id")
+    @KafkaListener(topics=[Kafka.RECORDS_TOPIC])
     override fun getMessage(message: ByteArray) {
-        var r = SerializationUtils.deserialize(message) as BudgetRecord
-        logger.debug(r.description)
+        val r = SerializationUtils.deserialize(message) as BudgetRecord
+        logger.debug("Receive message: %s".format(r.description))
     }
 }
