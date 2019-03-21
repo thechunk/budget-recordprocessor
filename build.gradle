@@ -27,12 +27,12 @@ dependencies {
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
     implementation 'com.google.apis:google-api-services-sheets:v4-rev516-1.23.0'
     implementation 'org.springframework.kafka:spring-kafka:2.2.4.RELEASE'
+    implementation 'org.springframework.kafka:spring-kafka-test:2.2.4.RELEASE'
     implementation 'ch.qos.logback:logback-classic:1.2.3'
     runtimeOnly 'com.h2database:h2'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude module: 'junit'
     }
-    testImplementation 'org.springframework.kafka:spring-kafka-test:2.2.4.RELEASE'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.junit.jupiter:junit-jupiter-migrationsupport'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
