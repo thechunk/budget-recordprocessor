@@ -18,7 +18,7 @@ class RecordKafkaConsumer(val budgetService: BudgetService) : Consumer {
         val r = SerializationUtils.deserialize(record.value()) as MessageRequest
         val tokens = r.tokens
         if (tokens?.google != null) {
-            budgetService.processRecord(r.record, tokens.google)
+            budgetService.processRecord(r.record, tokens.google?.accessToken ?: "")
         }
         logger.debug("Receive: %s from %s".format(record.key(), record.topic()))
     }
